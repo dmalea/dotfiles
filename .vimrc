@@ -13,10 +13,7 @@ set incsearch
 set hlsearch
 
 " Highlight trailing whitespace and lines longer than 80 columns.
-highlight LongLine ctermbg=DarkYellow guibg=DarkYellow
 highlight WhitespaceEOL ctermbg=DarkYellow guibg=DarkYellow
-
-au BufRead,BufNewFile * syntax match LongLine /\%>80v.\+/
 au InsertEnter * syntax match WhitespaceEOL /\s\+\%#\@<!$/
 au InsertLeave * syntax match WhitespaceEOL /\s\+$/
 
