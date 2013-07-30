@@ -1,0 +1,12 @@
+[user]
+	email = daniel.malea@intel.com
+	name = Daniel Malea
+[color]
+	ui = auto
+	ui = true
+[diff]
+[core]
+	whitespace = trailing-space
+[rerere]
+	enabled = 0
+	autoupdate = 0
