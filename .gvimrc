@@ -38,6 +38,14 @@ augroup csrc
   autocmd FileType c,cpp  set colorcolumn=80 cindent softtabstop=2 shiftwidth=2
 augroup END
 
+" CMake files -- from http://www.vtk.org/Wiki/VTK/FAQ#Vim_indentation
+augroup filetype
+   autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt,*.cmake.in set tabstop=2 shiftwidth=2 expandtab cinoptions={1s,:0,l1,g0,c0,(0,(s,m1 
+   autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt,*.cmake.in set filetype=cmake
+   autocmd BufRead,BufNewFile *.ctest,*.ctest.in set filetype=cmake
+augroup END
+
+
 " Set a few indentation parameters. See the VIM help for cinoptions-values for
 " details.  These aren't absolute rules; they're just an approximation of
 " common style in LLVM source.
