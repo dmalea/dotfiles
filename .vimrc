@@ -13,19 +13,19 @@ set incsearch
 set hlsearch
 
 " Highlight trailing whitespace and lines longer than 80 columns.
-highlight WhitespaceEOL ctermbg=DarkYellow guibg=DarkYellow
-au InsertEnter * syntax match WhitespaceEOL /\s\+\%#\@<!$/
-au InsertLeave * syntax match WhitespaceEOL /\s\+$/
+"highlight WhitespaceEOL ctermbg=DarkYellow guibg=DarkYellow
+"au InsertEnter * syntax match WhitespaceEOL /\s\+\%#\@<!$/
+"au InsertLeave * syntax match WhitespaceEOL /\s\+$/
 
 " Enable filetype detection
 filetype on
 
 " Optional
-" C/C++ programming helpers -- 2 line spaces with 80 col marker
+" C/C++ programming helpers -- 2 line spaces
 augroup csrc
   au!
   autocmd FileType *      set nocindent smartindent
-  autocmd FileType c,cpp  set colorcolumn=80 cindent softtabstop=2 shiftwidth=2
+  autocmd FileType c,cpp  set cindent softtabstop=2 shiftwidth=2
 augroup END
 
 " Python programming helpers -- 4 line spaces
@@ -78,9 +78,12 @@ augroup filetype
 augroup END
 
 " camelcasemotion
-map <silent> w ,w
-map <silent> b ,b
-map <silent> e ,e
+map <silent> w CamelCaseMotion_w
+map <silent> b CamelCaseMotion_b
+map <silent> e CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
 
 set path=$PWD/**
 set exrc
