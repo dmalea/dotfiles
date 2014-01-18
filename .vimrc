@@ -78,9 +78,9 @@ augroup filetype
 augroup END
 
 " camelcasemotion
-map <silent> w CamelCaseMotion_w
-map <silent> b CamelCaseMotion_b
-map <silent> e CamelCaseMotion_e
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
 sunmap w
 sunmap b
 sunmap e

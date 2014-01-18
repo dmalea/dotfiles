@@ -16,9 +16,9 @@ set guifont="Droid Sans Mono 10"
 colorscheme blackdust
 
 " Highlight trailing whitespace and lines longer than 80 columns.
-highlight WhitespaceEOL ctermbg=DarkBlue guibg=DarkBlue
-au InsertEnter * syntax match WhitespaceEOL /\s\+\%#\@<!$/
-au InsertLeave * syntax match WhitespaceEOL /\s\+$/
+"highlight WhitespaceEOL ctermbg=DarkBlue guibg=DarkBlue
+"au InsertEnter * syntax match WhitespaceEOL /\s\+\%#\@<!$/
+"au InsertLeave * syntax match WhitespaceEOL /\s\+$/
 
 " Enable filetype detection
 filetype on
@@ -28,14 +28,14 @@ filetype on
 augroup csrc
   au!
   autocmd FileType *      set nocindent smartindent
-  autocmd FileType c,cpp  set colorcolumn=80 cindent softtabstop=2 shiftwidth=2
+  autocmd FileType c,cpp  set cindent softtabstop=2 shiftwidth=2
 augroup END
 
 " C/C++ programming helpers
 augroup csrc
   au!
   autocmd FileType *      set nocindent smartindent
-  autocmd FileType c,cpp  set colorcolumn=80 cindent softtabstop=2 shiftwidth=2
+  autocmd FileType c,cpp  set cindent softtabstop=2 shiftwidth=2
 augroup END
 
 " CMake files -- from http://www.vtk.org/Wiki/VTK/FAQ#Vim_indentation
@@ -83,9 +83,9 @@ augroup filetype
 augroup END
 
 " camelcasemotion
-map <silent> w ,w
-map <silent> b ,b
-map <silent> e ,e
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
 
 set path=$PWD/**
 set exrc
