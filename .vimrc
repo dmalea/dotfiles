@@ -77,14 +77,6 @@ augroup filetype
   au! BufRead,BufNewFile *.td     set filetype=tablegen
 augroup END
 
-" camelcasemotion
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-sunmap w
-sunmap b
-sunmap e
-
 set path=$PWD/**
 set exrc
 
