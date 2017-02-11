@@ -12,7 +12,7 @@ set mouse=a
 set showmatch
 set incsearch
 
-set guifont="Droid Sans Mono 10"
+set guifont=SF\ Mono:h14
 colorscheme blackdust
 
 " Highlight trailing whitespace and lines longer than 80 columns.
