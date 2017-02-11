@@ -10,3 +10,5 @@
 [rerere]
 	enabled = 0
 	autoupdate = 0
+[diff]
+	tool = meld
